@@ -9,9 +9,9 @@
 }
 
 .passenger {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 0.125rem solid lightgrey;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.2rem solid rgb(235, 235, 235);
 }
 
 .flight-info {
@@ -40,18 +40,18 @@
 }
 
 .left-divider {
-    background: red;
-    margin-left: -2rem;
+    background: #e42525;
+    margin-left: -2.25rem;
     margin-right: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    width: 1.2rem;
+    width: 1.25rem;
     height: 2rem;
 }
 
 .line-divider {
     margin: 1rem 0;
-    height: 0.25rem;
+    height: 0.15rem;
     background: repeating-linear-gradient(to right, darkgray 0,darkgray 0.6rem,transparent 0.4rem,transparent 1rem)
     /*3px red then 4px transparent -> repeat this!*/
 }
@@ -59,9 +59,9 @@
 .right-divider {
     background: #e42525;
     margin-left: 1rem;
-    margin-right: -2rem;
+    margin-right: -2.5rem;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    width: 1.2rem;
+    width: 1.25rem;
     height: 2rem;
 }

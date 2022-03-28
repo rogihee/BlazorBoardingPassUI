@@ -5,11 +5,12 @@
 }
 
 .label {
-    color: darkgray;
+    color: rgb(190, 190, 190);
     font-size: 0.675rem;
+    font-weight: 600;
 }
 
 .text {
     color: black;
-    font-weight: bold;
+    font-weight: 800;
 }
