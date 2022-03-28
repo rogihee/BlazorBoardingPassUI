@@ -1,4 +1,8 @@
-﻿<Router AppAssembly="@GetType().Assembly">
+﻿@using BoardingPassComponents
+@using BoardingPassComponents.Shared
+
+<Router AppAssembly="@GetType().Assembly"
+		AdditionalAssemblies="@(new[]{typeof(BoardingPassServiceExtensions).Assembly})">
 	<Found Context="routeData">
 		<RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
 	</Found>
