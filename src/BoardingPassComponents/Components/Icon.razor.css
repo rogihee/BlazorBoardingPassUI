@@ -1,0 +1,8 @@
+﻿icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}

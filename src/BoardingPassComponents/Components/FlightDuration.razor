@@ -1,0 +1,12 @@
+﻿<div class="flight-duration">
+    <Icon src="@BoardingPassAssets.Airplane" SvgFill="white" Size="1.5rem"/>
+    <span class="duration">@DurationTxt</span>
+</div>
+
+@code
+{
+    [Parameter]
+    public TimeSpan? Duration { get; set; }
+
+    private string DurationTxt => Duration != null ? $"{Duration?.Hours:#0}h {Duration?.Minutes:#0}m" : "";
+}

@@ -1,0 +1,17 @@
+﻿.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.city {
+    color: var(--color-text-label);
+    font-size: 0.75rem;
+}
+
+.airport-code {
+    color: var(--color-text-label);
+    font-size: var(--font-size-header-text);
+    font-weight: bold;
+    font-size: 2rem;
+}

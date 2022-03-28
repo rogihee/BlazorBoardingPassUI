@@ -1,0 +1,29 @@
+﻿<div class="boarding-pass-container">
+    <div class="boarding-pass-body">
+        <div class="passenger">
+            <LabelText Label="Passenger" Text="@BoardingPass?.Passenger?.DisplayName"/>
+            @*TODO: add icon right *@
+        </div>
+        <div class="flight-info">
+            <div class="flight-info-col1">
+                <LabelText Label="Date" Text="@Flight?.Date?.ToShortDateString()"/>
+                <LabelText Label="Class" Text="@FlightClassHelper.ToDisplayName(Flight?.FlightClass)"/>
+                <LabelText Label="Boarding time" Text="@Flight?.BoardingTime?.ToShortTimeString()"/>
+                <LabelText Label="Terminal" Text="@Flight?.BoardingTime?.ToShortTimeString()"/>
+            </div>
+            <div class="flight-info-col2">
+                <LabelText Label="Flight" Text="@Flight?.Code"/>
+                <LabelText Label="Seat" Text="@Flight?.Seat"/>
+                <LabelText />
+                <LabelText Label="Gate" Text="@Flight?.Gate"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    [Parameter, EditorRequired]
+    public BoardingPass? BoardingPass { get; set; }
+    private Flight? Flight => BoardingPass?.Flight;
+}

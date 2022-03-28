@@ -1,0 +1,14 @@
+﻿<div class="header">
+    <SourceDestination City="@Source?.City" AirportCode="@Source?.AirportCode"/>
+    <FlightDuration Duration="@Duration"/>
+    <SourceDestination City="@Destination?.City" AirportCode="@Destination?.AirportCode"/>
+</div>
+
+@code{
+    [Parameter, EditorRequired]
+    public Airport? Source { get; set; }
+    [Parameter, EditorRequired]
+    public TimeSpan? Duration { get; set; }
+    [Parameter, EditorRequired]
+    public Airport? Destination { get; set; }
+}

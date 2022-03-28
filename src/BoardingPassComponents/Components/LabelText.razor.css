@@ -1,12 +1,15 @@
 ﻿.container {
     display:flex;
     flex-direction: column;
+    gap: 0.25rem;
 }
-    .container.label {
-        color: var(--)
-    }
 
-    .label-text.label {
+.label {
+    color: darkgray;
+    font-size: 0.75rem;
+}
 
-    }
-
+.text {
+    color: black;
+    font-weight: bold;
+}

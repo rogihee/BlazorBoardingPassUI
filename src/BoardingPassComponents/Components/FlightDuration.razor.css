@@ -1,0 +1,11 @@
+﻿.flight-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.duration {
+    font-size: 0.75rem;
+    white-space: nowrap;
+}

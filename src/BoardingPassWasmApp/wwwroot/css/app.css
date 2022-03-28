@@ -2,6 +2,19 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #e42525;
+    color: white;
+}
+
+.loading {
+    display: grid;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    height: calc(100vh - 1em);
+    width: calc(100vw - 1em);
+    font-size: 2rem;
+    color: white;
 }
 
 h1:focus {

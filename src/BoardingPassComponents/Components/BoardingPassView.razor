@@ -1,0 +1,21 @@
+﻿@inject IBoardingPassService BoardingPassService
+
+<div class="boarding-pass-container">
+    <BoardingPassHeader Source="@Flight?.From"
+                        Duration="@Flight?.Duration"
+                        Destination="@Flight?.To"/>
+    <BoardingPassBody BoardingPass="@BoardingPass"/>
+</div>
+@code
+{
+    [Parameter, EditorRequired]
+    public Guid Id { get; set; }
+
+    private BoardingPass BoardingPass { get; set; }
+    private Flight? Flight => BoardingPass.Flight;
+
+    protected override async Task OnInitializedAsync()
+    {
+        BoardingPass = await BoardingPassService.GetBoardingPass(Id);
+    }
+}

@@ -1,0 +1,45 @@
+﻿<icon @attributes="@Attributes" style="@GetStyle()">
+    @if (!IsSvgSrc)
+    {
+        <img src="@Src" alt="" width="@Width" height="@Height" @attributes="@Attributes" />
+    }
+</icon>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object>? Attributes { get; set; }
+    [Parameter] 
+    public string Src { get; set; } = "";
+    [Parameter] 
+    public string? SvgFill { get; set; }
+    [Parameter] 
+    public string? Size { get; set; }
+    [Parameter] 
+    public string? Width { get; set; }
+    [Parameter] 
+    public string? Height { get; set; }
+
+    private bool IsSvgSrc => Src.Contains(".svg", StringComparison.InvariantCultureIgnoreCase);
+    private bool IsSvgWithFill => IsSvgSrc && !string.IsNullOrEmpty(SvgFill);
+
+    protected override void OnParametersSet()
+    {
+        if (string.IsNullOrEmpty(Width)) Width = Size;
+        if (string.IsNullOrEmpty(Height)) Height = Size;
+    }
+
+    private string GetStyle()
+    {
+        var res = new List<string?>();
+        if (IsSvgWithFill) res.Add($"background-color: {SvgFill}");
+        if (IsSvgSrc) res.Add($"-webkit-mask-image: url({Src})");
+        if (Width != null) res.Add("width: " + Width);
+        if (Width != null) res.Add("max-width: " + Width); /* force width */
+        if (Width != null) res.Add("min-width: " + Width); /* force width */
+        if (Height != null) res.Add("height: " + Height);
+        if (Height != null) res.Add("max-height: " + Height); /* force height */
+        if (Height != null) res.Add("min-height: " + Height); /* force height */
+        if (Attributes?.ContainsKey("style") == true) res.Add(Attributes["style"].ToString());
+        var result = string.Join("; ", res);
+        return result;
+    }
+}

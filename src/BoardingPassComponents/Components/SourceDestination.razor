@@ -1,0 +1,11 @@
+﻿<div class="container">
+    <span class="city">@City</span>
+    <span class="airport-code">@AirportCode</span>
+</div>
+
+@code {
+    [Parameter, EditorRequired] 
+    public string? City { get; set; }
+    [Parameter, EditorRequired] 
+    public string? AirportCode { get; set; }
+}

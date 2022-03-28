@@ -1,9 +1,11 @@
 ﻿@page "/"
+@page "/{id:guid}"
 
 <h3>BoardingPass Demo</h3>
 
-<BoardingPass></BoardingPass>
+<BoardingPassView Id="@Id"/>
 
 @code {
-
+    [Parameter, SupplyParameterFromQuery]
+    public Guid Id { get; set; }
 }
