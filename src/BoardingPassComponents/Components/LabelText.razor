@@ -1,0 +1,11 @@
+﻿<div class="container">
+    <span class="label">@Label</span>
+    <span class="text">@Text</span>
+</div>
+
+@code {
+    [Parameter, EditorRequired] 
+    public string Label { get; set; }
+    [Parameter, EditorRequired] 
+    public string Text { get; set; }
+}
