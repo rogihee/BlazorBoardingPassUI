@@ -24,7 +24,7 @@
             <div class="right-divider"></div>
         </div>
         <div class="barcode">
-            <Barcode Text="Hello world!"/>
+            <Barcode Text="@Passenger?.Id.ToString()"/>
         </div>
     </div>
 </div>
@@ -33,6 +33,8 @@
 {
     [Parameter, EditorRequired]
     public BoardingPass? BoardingPass { get; set; }
+
     private Flight? Flight => BoardingPass?.Flight;
+    private Passenger? Passenger => BoardingPass?.Passenger;
 }
 

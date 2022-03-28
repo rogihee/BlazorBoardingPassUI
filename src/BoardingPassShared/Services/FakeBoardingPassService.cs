@@ -28,6 +28,7 @@ public class FakeBoardingPassService : IBoardingPassService
             },
             Passenger = new Passenger
             {
+                Id = Guid.NewGuid(),
                 FirstName = Faker.Name.First(),
                 LastName = Faker.Name.Last()
             }
