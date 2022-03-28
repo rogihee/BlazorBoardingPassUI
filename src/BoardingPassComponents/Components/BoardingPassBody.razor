@@ -9,7 +9,7 @@
                 <LabelText Label="Date" Text="@Flight?.Date?.ToShortDateString()"/>
                 <LabelText Label="Class" Text="@FlightClassHelper.ToDisplayName(Flight?.FlightClass)"/>
                 <LabelText Label="Boarding time" Text="@Flight?.BoardingTime?.ToShortTimeString()"/>
-                <LabelText Label="Terminal" Text="@Flight?.BoardingTime?.ToShortTimeString()"/>
+                <LabelText Label="Terminal" Text="@Flight?.Terminal"/>
             </div>
             <div class="flight-info-col2">
                 <LabelText Label="Flight" Text="@Flight?.Code"/>
@@ -17,6 +17,14 @@
                 <LabelText />
                 <LabelText Label="Gate" Text="@Flight?.Gate"/>
             </div>
+        </div>
+        <div class="tear-off">
+            <div class="left-divider"></div>
+            <div class="line-divider"></div>
+            <div class="right-divider"></div>
+        </div>
+        <div class="barcode">
+            <Barcode Text="Hello world!"/>
         </div>
     </div>
 </div>
@@ -27,3 +35,4 @@
     public BoardingPass? BoardingPass { get; set; }
     private Flight? Flight => BoardingPass?.Flight;
 }
+
