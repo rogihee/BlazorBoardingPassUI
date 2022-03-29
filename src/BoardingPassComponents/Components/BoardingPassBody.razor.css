@@ -53,7 +53,6 @@
     margin: 1rem 0;
     height: 0.15rem;
     background: repeating-linear-gradient(to right, darkgray 0,darkgray 0.6rem,transparent 0.4rem,transparent 1rem)
-    /*3px red then 4px transparent -> repeat this!*/
 }
 
 .right-divider {
