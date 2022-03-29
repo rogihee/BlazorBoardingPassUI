@@ -65,3 +65,9 @@
     width: 1.25rem;
     height: 2rem;
 }
+
+.barcode {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
