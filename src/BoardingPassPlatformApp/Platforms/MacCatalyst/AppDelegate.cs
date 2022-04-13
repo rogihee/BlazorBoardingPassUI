@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace BlazorBoardingPassUI;
+namespace BoardingPassPlatformApp;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

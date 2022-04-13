@@ -6,7 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassComponents", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassWasmApp", "BoardingPassWasmApp\BoardingPassWasmApp.csproj", "{E2AEF261-6C48-40D9-9F93-B5629CC009B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardingPassShared", "BoardingPassShared\BoardingPassShared.csproj", "{B819EBBE-362E-4E6D-AEA5-C7421E7CA6D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassShared", "BoardingPassShared\BoardingPassShared.csproj", "{B819EBBE-362E-4E6D-AEA5-C7421E7CA6D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassPlatformApp", "BoardingPassPlatformApp\BoardingPassPlatformApp.csproj", "{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,12 @@ Global
 		{B819EBBE-362E-4E6D-AEA5-C7421E7CA6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B819EBBE-362E-4E6D-AEA5-C7421E7CA6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B819EBBE-362E-4E6D-AEA5-C7421E7CA6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

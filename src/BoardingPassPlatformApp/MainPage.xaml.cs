@@ -1,4 +1,4 @@
-﻿namespace BlazorBoardingPassUI;
+﻿namespace BoardingPassPlatformApp;
 
 public partial class MainPage : ContentPage
 {

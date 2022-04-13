@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="BlazorBoardingPassUI.WinUI.App"
+    x:Class="BoardingPassPlatformApp.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:BlazorBoardingPassUI.WinUI">
+    xmlns:local="using:BoardingPassPlatformApp.WinUI">
 
 </maui:MauiWinUIApplication>

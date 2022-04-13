@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace BlazorBoardingPassUI;
+namespace BoardingPassPlatformApp;
 
 [Application]
 public class MainApplication : MauiApplication

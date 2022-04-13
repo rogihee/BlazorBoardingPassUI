@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using BlazorBoardingPassUI.Data;
+﻿using BoardingPassComponents;
+using BoardingPassPlatformApp.Data;
+using BoardingPassShared;
 
-namespace BlazorBoardingPassUI;
+namespace BoardingPassPlatformApp;
 
 public static class MauiProgram
 {
@@ -9,15 +10,17 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
-			.RegisterBlazorMauiWebView()
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
 
-		builder.Services.AddBlazorWebView();
+		builder.Services.AddMauiBlazorWebView();
+
 		builder.Services.AddSingleton<WeatherForecastService>();
+        builder.Services.AddBoardingPassComponentsServices();
+		builder.Services.AddBoardingPassSharedServices(fake:true);
 
 		return builder.Build();
 	}
