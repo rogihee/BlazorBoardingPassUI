@@ -2,6 +2,6 @@
 
 public class BoardingPass
 {
-    public Flight? Flight {get;set;}
+    public Flight? Flight { get; set; }
     public Passenger? Passenger { get; set; }
 }

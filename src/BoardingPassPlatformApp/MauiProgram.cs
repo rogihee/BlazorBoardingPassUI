@@ -22,6 +22,10 @@ public static class MauiProgram
         builder.Services.AddBoardingPassComponentsServices();
 		builder.Services.AddBoardingPassSharedServices(fake:true);
 
+#if DEBUG
+        builder.Services.AddBlazorWebViewDeveloperTools();
+#endif
+
 		return builder.Build();
 	}
 }

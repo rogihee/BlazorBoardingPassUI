@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Microsoft.AspNetCore.Components.WebView.Maui"
              xmlns:local="clr-namespace:BoardingPassPlatformApp"
-             xmlns:pages="clr-namespace:BoardingPassPlatformApp.Pages"
+             xmlns:pages="clr-namespace:BoardingPassComponents.Pages;assembly=BoardingPassComponents"
              x:Class="BoardingPassPlatformApp.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <b:BlazorWebView HostPage="wwwroot/index.html">
+    <b:BlazorWebView HostPage="wwwroot/index.html" Margin="10">
         <b:BlazorWebView.RootComponents>
-            <b:RootComponent Selector="#app" ComponentType="{x:Type pages:BoardingPass}" />
+            <b:RootComponent Selector="#app" ComponentType="{x:Type pages:BoardingPassDemo}" />
         </b:BlazorWebView.RootComponents>
     </b:BlazorWebView>
 
