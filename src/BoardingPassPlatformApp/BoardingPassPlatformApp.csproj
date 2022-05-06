@@ -50,4 +50,6 @@
 	  <ProjectReference Include="..\BoardingPassComponents\BoardingPassComponents.csproj" />
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionBoardingPassPlatformAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
 </Project>

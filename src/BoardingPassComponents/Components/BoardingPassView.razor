@@ -11,8 +11,8 @@
     [Parameter, EditorRequired]
     public Guid Id { get; set; }
 
-    private BoardingPass BoardingPass { get; set; }
-    private Flight? Flight => BoardingPass.Flight;
+    private BoardingPass? BoardingPass { get; set; }
+    private Flight? Flight => BoardingPass?.Flight;
 
     protected override async Task OnInitializedAsync()
     {

@@ -6,8 +6,14 @@
     <Application.Resources>
         <ResourceDictionary>
 
-            <Color x:Key="PageBackgroundColor">#512bdf</Color>
+            <Color x:Key="PageBackgroundColor">#e42525</Color>
             <Color x:Key="PrimaryTextColor">White</Color>
+            <Color x:Key="StatusBarColor">#a80000</Color>
+            
+            <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource StatusBarColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
+            </Style>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
