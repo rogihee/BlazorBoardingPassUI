@@ -1,7 +1,8 @@
 ﻿.header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1.5rem;
+    background-color: var(--view-background-color);
 }

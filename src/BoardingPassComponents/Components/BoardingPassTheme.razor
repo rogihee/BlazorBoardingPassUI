@@ -1,12 +1,18 @@
 ﻿@using System.Drawing
 <style>
     :root {
-        --color-text-label: #d7d7d7;
-        --color-text: #d7d7d7;
-        --color-background: @PageBackground;
+        --view-background-color: #e42525;
+
+        --header-label-font-size: 0.75rem;
+        --header-text-font-size: 2rem;
+        --header-text-color: white;
+        
+        --body-label-color: #909090;
+        --body-text-color: #222222;
     }
 </style>
 
 @code {
+    // TODO: how to get this color into Android colors.xml
     public static string PageBackground { get; set; } = "#e42525";
 }

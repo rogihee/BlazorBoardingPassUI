@@ -5,15 +5,10 @@
              x:Class="BoardingPassPlatformApp.App">
     <Application.Resources>
         <ResourceDictionary>
-
+            <!--<ResourceDictionary Source="Resources/Styles.xaml" />-->
             <Color x:Key="PageBackgroundColor">#e42525</Color>
-            <Color x:Key="PrimaryTextColor">White</Color>
+            <!--<Color x:Key="PrimaryTextColor">White</Color>
             <Color x:Key="StatusBarColor">#a80000</Color>
-            
-            <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource StatusBarColor}" />
-                <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
-            </Style>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
@@ -25,7 +20,7 @@
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BackgroundColor" Value="#2b0b98" />
                 <Setter Property="Padding" Value="14,10" />
-            </Style>
+            </Style>-->
 
         </ResourceDictionary>
     </Application.Resources>

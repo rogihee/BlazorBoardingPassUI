@@ -1,0 +1,11 @@
+﻿:root {
+    --view-background-color: #e42525;
+    --header-label-font-size: 0.75rem;
+    --header-text-font-size: 2rem;
+    --header-text-color: white;
+    --body-background-color: white;
+    --body-label-color: #909090;
+    --body-text-color: #222222;
+    --body-line-color: #EBEBEB;
+    --body-tear-off-color: #8A8A8A;
+}

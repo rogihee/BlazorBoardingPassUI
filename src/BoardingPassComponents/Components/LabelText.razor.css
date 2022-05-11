@@ -5,12 +5,12 @@
 }
 
 .label {
-    color: rgb(190, 190, 190);
+    color: var(--body-label-color);
     font-size: 0.675rem;
     font-weight: 600;
 }
 
 .text {
-    color: black;
+    color: var(--body-text-color);
     font-weight: 800;
 }

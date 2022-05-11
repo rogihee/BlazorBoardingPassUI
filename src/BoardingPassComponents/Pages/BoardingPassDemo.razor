@@ -1,9 +1,10 @@
 ﻿@page "/"
 @page "/{id:guid}"
 
+<BoardingPassTheme/>
 <BoardingPassView Id="@Id"/>
 
 @code {
-    [Parameter, SupplyParameterFromQuery]
+    [Parameter]
     public Guid Id { get; set; }
 }

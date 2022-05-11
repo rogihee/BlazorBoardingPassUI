@@ -1,4 +1,6 @@
-﻿namespace BoardingPassShared;
+﻿using BoardingPassShared.Converters;
+
+namespace BoardingPassShared;
 
 public static class BoardingPassSharedServiceExtensions
 {
@@ -6,11 +8,11 @@ public static class BoardingPassSharedServiceExtensions
     {
         if (fake)
         {
-            services.AddSingleton<IBoardingPassService, FakeBoardingPassService>();
+            services.AddScoped<IBoardingPassService, FakeBoardingPassService>();
         }
         else
         {
-            services.AddSingleton<IBoardingPassService, FakeBoardingPassService>();
+            services.AddScoped<IBoardingPassService, BoardingPassService>();
         }
         return services;
     }

@@ -1,9 +1,28 @@
+using BoardingPassShared.Converters;
+using BoardingPassShared.Helpers;
+using BoardingPassShared.Models;
+using BoardingPassShared.Services;
+using Microsoft.AspNetCore.Http.Json;
+using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(setup =>
+{
+    setup.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
+
+// this is not working in Minimal Api's, dunno why
+// builder.Services.ConfigureOptions<ConfigureJsonOptions>();
+builder.Services.Configure<JsonOptions>(options => 
+    {
+        options.SerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+        options.SerializerOptions.Converters.Add(new TimeOnlyJsonConverter());
+    });
 
 var app = builder.Build();
 
@@ -13,31 +32,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+var fakeService = new FakeBoardingPassService();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateTime.Now.AddDays(index),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+app.MapGet("boardingpass/{id}", (Guid id) => 
+        id == BoardingPass.TestId ? fakeService.GetBoardingPass(id) : null);
 
 app.Run();
-
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

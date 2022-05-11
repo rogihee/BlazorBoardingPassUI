@@ -2,6 +2,16 @@
 
 namespace BoardingPassComponents.Services;
 
+public class JsBarcodeOptions
+{
+    public string? Format { get; set; }
+    public string? LineColor { get; set; } = "black";
+    public string? Background { get; set; } = "transparent";
+    public int Width { get; set; } = 2;
+    public int Height { get; set; } = 60;
+    public bool DisplayValue { get; set; } = false;
+}
+
 public class JsBarcodeService
 {
     private readonly IJSRuntime _jsRuntime;
@@ -18,14 +28,4 @@ public class JsBarcodeService
         options ??= _defaultOptions;
         return _jsRuntime.InvokeVoidAsync("JsBarcode", "#barcode", value, options);
     }
-}
-
-public class JsBarcodeOptions
-{
-    public string? Format { get; set; }
-    public string? LineColor { get; set; } = "black";
-    public string? Background { get; set; } = "transparent";
-    public int Width { get; set; } = 2;
-    public int Height { get; set; } = 60;
-    public bool DisplayValue { get; set; } = false;
 }

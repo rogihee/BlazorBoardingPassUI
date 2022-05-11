@@ -10,7 +10,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassShared", "Board
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassPlatformApp", "BoardingPassPlatformApp\BoardingPassPlatformApp.csproj", "{CA71E0B1-D56A-45AD-89AC-CF63FDB1F3F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardingPassApi", "BoardingPassApi\BoardingPassApi.csproj", "{6D8582D7-59CA-43CC-812E-E58BC2565BB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoardingPassApi", "BoardingPassApi\BoardingPassApi.csproj", "{6D8582D7-59CA-43CC-812E-E58BC2565BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardingPassComponents.Tests", "BoardingPassComponents.Tests\BoardingPassComponents.Tests.csproj", "{C125C88D-91B9-44FE-80A3-5418261E205F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{6D8582D7-59CA-43CC-812E-E58BC2565BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D8582D7-59CA-43CC-812E-E58BC2565BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D8582D7-59CA-43CC-812E-E58BC2565BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C125C88D-91B9-44FE-80A3-5418261E205F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C125C88D-91B9-44FE-80A3-5418261E205F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C125C88D-91B9-44FE-80A3-5418261E205F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C125C88D-91B9-44FE-80A3-5418261E205F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

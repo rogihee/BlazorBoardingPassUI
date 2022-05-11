@@ -1,5 +1,5 @@
 ﻿.boarding-pass-container {
-    background-color: white;
+    background-color: var(--body-background-color);
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
 }
@@ -11,7 +11,9 @@
 .passenger {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 0.2rem solid rgb(235, 235, 235);
+    border-bottom: 0.2rem solid var(--body-line-color);
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .flight-info {
@@ -40,7 +42,7 @@
 }
 
 .left-divider {
-    background: #e42525;
+    background: var(--view-background-color);
     margin-left: -2.25rem;
     margin-right: 1rem;
     border-top-right-radius: 1rem;
@@ -52,11 +54,11 @@
 .line-divider {
     margin: 1rem 0;
     height: 0.15rem;
-    background: repeating-linear-gradient(to right, darkgray 0,darkgray 0.6rem,transparent 0.4rem,transparent 1rem)
+    background: repeating-linear-gradient(to right,var(--body-tear-off-color) 0, var(--body-tear-off-color) 0.6rem,transparent 0.4rem,transparent 1rem)
 }
 
 .right-divider {
-    background: #e42525;
+    background: var(--view-background-color);
     margin-left: 1rem;
     margin-right: -2.5rem;
     border-top-left-radius: 1rem;
