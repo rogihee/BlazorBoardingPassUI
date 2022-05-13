@@ -6,7 +6,6 @@ public static class BoardingPassComponentsServiceExtensions
 {
     public static IServiceCollection AddBoardingPassComponentsServices(this IServiceCollection services)
     {
-        services.AddScoped<BoardingPassComponentService>();
         services.AddScoped<JsBarcodeService>();
         return services;
     }

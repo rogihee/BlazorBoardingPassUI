@@ -1,9 +1,7 @@
 using BoardingPassShared.Converters;
-using BoardingPassShared.Helpers;
 using BoardingPassShared.Models;
 using BoardingPassShared.Services;
 using Microsoft.AspNetCore.Http.Json;
-using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
